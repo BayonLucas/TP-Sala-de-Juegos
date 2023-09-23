@@ -9,6 +9,7 @@ import { QuienSoyComponent } from './components/quien-soy/quien-soy.component';
 import { FormsModule } from '@angular/forms';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
