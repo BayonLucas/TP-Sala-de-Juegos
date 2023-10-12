@@ -1,0 +1,15 @@
+<nav class="navbar navbar-dark bg-dark justify-content-between">
+    <div *ngIf="user | async as user; else then_content" class="d-flex align-items-center">
+        <label class="text-light m-2" > {{user.email}} </label>
+        <div>
+            <button type="button" class="btn btn-light m-1" (click)="handleCerrar()">logOut</button>
+        </div>
+    </div>
+    <ng-template #then_content > 
+        <label  class="text-light m-2" > Inicie Sesión </label>
+        <div>
+            <button type="button" class="btn btn-light m-1" routerLink="/login">logIn</button>
+            <button type="button" class="btn btn-light m-1" routerLink="/register">singIn</button>
+        </div>
+    </ng-template>
+</nav>

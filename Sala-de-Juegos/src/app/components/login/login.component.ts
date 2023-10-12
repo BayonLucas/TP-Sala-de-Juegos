@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService} from '../../services/auth.service'
+import { AuthService } from '../../services/auth.service';
+import { CollectionsManagerService } from 'src/app/services/collections-manager.service';
+
 
 @Component({
   selector: 'app-login',
@@ -9,24 +11,36 @@ import { AuthService} from '../../services/auth.service'
 })
 
 
+export class LoginComponent implements OnInit {
 
-
-export class LoginComponent {
-
-  public mail: string = '';
+  public email: string = '';
   public pass: string = '';
+  public err: boolean = false;
+  public list: any;
 
-  constructor(private router: Router, private auth: AuthService){}
+  constructor(
+    private router: Router, 
+    private auth: AuthService,
+    private db: CollectionsManagerService
+  ){  }
 
+  ngOnInit(): void {
+    this.db.TraerUsuarios().then((usuarios) => {
+      this.list = usuarios;
+    });
+  }
 
-  public onClick(event?: any): void{
-    console.log(this.mail);
-    console.log(this.pass);
-    this.auth.login(this.mail, this.pass)
-
-
+  public Iniciar_Sesion(event?: any): void{
+    console.log(this.auth.login(this.email, this.pass));
     this.router.navigateByUrl("home");
   }
 
+  public onCargar_acceso_rapido(){
+    let index = Math.floor(Math.random() * (this.list.length));
+    let randomUser = this.list[index];
+  
+    this.email = randomUser.email;
+    this.pass = randomUser.password;
+  }
 
 }

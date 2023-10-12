@@ -1,0 +1,35 @@
+<body>
+    <div class="login-container">
+        <h2>Registrate</h2>
+        <form>
+            <div class="input-group ">
+                <span class="input-group-text">Nombre y apellido</span>
+                <input type="text" [(ngModel)]="this.nombre" name="nombre" aria-label="First name" class="form-control">
+                <input type="text" [(ngModel)]="this.apellido" name="apellido" aria-label="Last name" class="form-control">
+            </div>
+            <br>
+            <div class="form-floating mb-3 ">
+                <input type="email" [(ngModel)]="this.email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label class="" for="floatingInput">Ingrese email</label>
+            </div>
+            <div class="form-floating">
+                <input type="password" [(ngModel)]="this.contrasenia" name="contrasenia" class="form-control" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Ingrese contraseña</label>
+            </div> <br>
+            <div class="form-floating">
+                <input type="password" [(ngModel)]="this.confirmContrasenia" name="confimContrasenia" class="form-control" id="floatingPassword2" placeholder="Confirm Password">
+                <label for="floatingPassword">Confirme contraseña</label>
+            </div> <br>
+            <div class="d-grid gap-2 col-6 mx-auto" *ngIf="Validar_campos()">
+                <button  type="button" class="btn btn-secondary btn-lg" (click)="this.RegistrarUsuario()">Registrar</button> 
+                <br>
+            </div>
+        </form>
+        <div *ngIf="this.error">
+            <div class="p-3 mb-2 bg-danger text-white">
+                {{this.errorMessage}}
+            </div>
+        </div>
+        <p class="fs-6 fst-italic">¿Ya tenés una cuenta? <a routerLink="/login">Ingresa!</a></p>
+    </div>
+</body> 

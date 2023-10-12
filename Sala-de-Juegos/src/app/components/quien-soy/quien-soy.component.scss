@@ -1,0 +1,12 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('../../../assets/bk-joysticks.png');
+    background-repeat: no-repeat;
+    background-size: auto; 
+    // background-color: #444444;
+    font-family: Arial, sans-serif;
+}

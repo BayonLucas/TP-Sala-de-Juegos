@@ -1,68 +1,6 @@
-// @import url(https://use.fontawesome.com/releases/v6.4.2/css/all.css);
 
-// ul{
-//     display: flex;
-//     gap: 100px;
-// }
-
-// li{
-//     list-style: none;
-// }
-// .fa-brands{
-//     font-size: 40px;
-//     color: #262626;
-//     line-height: 60px;
-//     transition: 0.5s;
-// }
-// a{
-//     position: relative;
-//     display: block;
-//     width: 60px;
-//     height: 60px;
-//     background: #fff;
-//     text-align: center;
-//     transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(0, 0);
-//     transition: 0.5s;
-//     transition-timing-function: linear;
-//     box-shadow: -20px 20px rgba(0, 0, 0, 0.5);
-// }
-// a:before{
-//     content: "";
-//     position: absolute;
-//     top: 10px;
-//     left: -20px;
-//     height: 100%;
-//     width: 20px;
-//     background: #b1b1b1;
-//     transition: 0.5s;
-//     transform: rotate(0deg) skewY(-45deg);
-// }
-// a:after{
-//     content: "";
-//     position: absolute;
-//     bottom: -20px;
-//     left: -10px;
-//     height: 20px;
-//     width: 100%;
-//     background: #b1b1b1;
-//     transform: 0.85s;
-//     transform: rotate(0deg) skewX(-45deg);
-// }
-// a:hover{
-//     transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
-//     box-shadow: -50px, 50px, 50px rgba(0, 0, 0, 0.5);
-// }
-// li:hover .fa-brans{
-//     color: #fff;
-// }
-// li:hover a:before{
-//     background: var(--clr1);
-// }
-// li:hover a:after{
-//     background: var(--clr1);
-// }
 body {
-    margin: 0;
+  margin: 0;
     font-family: 'Muli', sans-serif;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -70,8 +8,9 @@ body {
   }
   
   .background {
-    background: url('https://images.pexels.com/photos/1095624/pexels-photo-1095624.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260')
-      center top no-repeat #252746;
+    // background: url('https://images.pexels.com/photos/1095624/pexels-photo-1095624.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260')
+    //   center top no-repeat #252746;
+    background-image: url('../../../assets/bk-joysticks.png');
     background-size: cover;
     display: block;
     width: 100%;
